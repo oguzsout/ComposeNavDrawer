@@ -7,8 +7,10 @@ import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class MenuItems(
     val icon: ImageVector? = null, val title: String? = null,
-    val isDivider: Boolean = false, val isHeader: Boolean = false
+    val isDivider: Boolean = false, val isHeader: Boolean = false, val topHeader: Boolean = false
 ) {
+    object TopHeader : MenuItems(title = "Gmail", topHeader = true)
+
     object AllInboxes : MenuItems(
         icon = Icons.Filled.AllInbox,
         title = "All inboxes"
