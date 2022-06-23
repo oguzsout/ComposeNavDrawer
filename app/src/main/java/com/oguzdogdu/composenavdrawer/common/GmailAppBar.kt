@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import com.oguzdogdu.composenavdrawer.ui.theme.background
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -35,7 +36,7 @@ fun GmailAppBar(
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
+                modifier = Modifier.background(color = background)
                     .fillMaxSize()
                     .padding(8.dp)
             ) {
@@ -54,7 +55,7 @@ fun GmailAppBar(
                 Image(
                     painter = painterResource(
                         id = com.oguzdogdu.composenavdrawer.R
-                            .drawable.ic_launcher_background
+                            .drawable.profile_photo
                     ),
                     contentDescription = "Profile",
                     modifier = Modifier
